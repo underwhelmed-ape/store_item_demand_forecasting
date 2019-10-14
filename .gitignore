@@ -1,2 +1,3 @@
 env_item_forecasting
-data
+data/*.csv
+.vscode
