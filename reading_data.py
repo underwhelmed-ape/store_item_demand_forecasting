@@ -11,9 +11,17 @@ print(train.columns)
 
 print(train.head())
 
-
+# convert string to datetime object
 train['date'] = pd.to_datetime(train['date'])
 
-train_filtered = train[train['store'] == 1]
+# subset data to store 1 and item 1
+train_filtered = train[(train.store == 2) & (train.item == 1)].copy()
 
-print(train_filtered.shape)
+
+
+
+
+
+
+plt.plot(train_filtered.date, train_filtered.sales, 'red')
+plt.show()
